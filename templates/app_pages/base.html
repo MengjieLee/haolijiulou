@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {# 模板样式 开始 #}
+    <link rel="stylesheet" href="/static/main/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main/css/swiper.min.css">
+    <link rel="stylesheet" href="/static/main/css/reset.css">
+    <link rel="stylesheet" href="/static/main/css/base.css">
+
+    {# 独立页面样式补充 开始 #}
+    {% block page_css %}
+
+    {% endblock page_css %}
+    {# 独立页面样式补充 结束 #}
+
+    <title>{{ title }}</title>
+</head>
+<body>
+{# 页眉浮窗 开始 #}
+<header>
+    
+</header>
+{# 页眉浮窗 结束 #}
+
+{# 正文内容 开始 #}
+<div>
+    {% block page_base %}
+    
+    {% endblock page_base %}
+</div>
+{# 正文内容 开始 #}
+
+{# 页脚浮窗 开始 #}
+<footer>
+    <a class="home" href="/home/">
+        <dl>
+            <dt><span></span></dt>
+            <dd>主页</dd>
+        </dl>
+    </a>
+    <a class="market" href="/market/">
+        <dl>
+            <dt><span></span></dt>
+            <dd>菜单</dd>
+        </dl>
+    </a>
+    <a class="cart" href="/cart/">
+        <dl>
+            <dt><span></span></dt>
+            <dd>购物车</dd>
+        </dl>
+    </a>
+    <a class="mine" href="/mine/">
+        <dl>
+            <dt><span></span></dt>
+            <dd>关于我</dd>
+        </dl>
+    </a>
+</footer>
+{# 页脚浮窗 结束 #}
+
+<script src="/static/main/js/jquery.min.js"></script>
+<script src="/static/main/js/bootstrap.min.js"></script>
+<script src="/static/main/js/swiper.min.js"></script>
+<script src="/static/main/js/ajax_setup.js"></script>
+<script src="/static/main/js/base.js"></script>
+
+{# 独立页面补充js 开始 #}
+{% block page_js %}
+
+{% endblock page_js %}
+{# 独立页面补充js 结束 #}
+</body>
+</html>
